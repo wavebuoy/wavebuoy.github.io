@@ -1,0 +1,108 @@
+<!doctype html>
+<html leng="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=1230, user-scalable=yes, target-densityDpi=medium-dpi">
+        <title>bubble</title>
+        <style type="text/css">
+            :root{
+                --color_bg : #112;
+                --color_01 : #1b4b89;
+                --color_02 : #00f;
+            }
+            *{ margin: 0; padding: 0; border: none;}
+            html, body{ background: var(--color_bg); overflow: hidden;}
+            .bottom_bg{ position: absolute; left: 0; bottom: 0; height: 200px; width: 100%; background:#112; z-index: 2;}
+            .wrap{position: absolute; width: 1200px; height: 650px; top: 87%; left: 50%; margin: -325px 0 0 -600px; overflow: hidden; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+            .wrap > div{ position: absolute; bottom: 0; left: 0; width: 200%; height: 60%;}
+            .wrap > div svg{position: absolute; bottom: 20%; left: 0; width: 100%;}
+            @keyframes wave_01 { 
+                0% {left: 0%; }
+                100% { left: -50%; }
+            }
+            @keyframes wave_02 { 
+                0% {left: -50%; }
+                100% { left: 0%; }
+            }
+            .wrap .back{ opacity: .5; height: 70%; }
+            .wrap .back svg{ transform: scaleY(50%); animation: wave_02 3300ms linear infinite; }
+            .wrap .front{ background: var(--color_01); }
+            .wrap .front svg{ transform: scaleY(60%); animation: wave_01 2500ms linear infinite;}
+            .wrap .front .bubble_01{ position: absolute; top: 0; left: 10%; z-index: 1; animation: up 2000ms ease-out infinite; }
+            @keyframes up { 
+                0% {transform: translateY(0) scale(2); opacity: 1; }
+                100% {transform: translateY(-500px) scale(.5); opacity: 0; }
+            }
+            .wrap .cover{}
+            .st1{fill: var(--color_01);}
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>            
+            $(function(){
+                setInterval(function(){
+                    var bubble_01 = Number(String(Math.random() * 200 + 50).substring(0,1)) * 3;
+                    var bubble_01_x = String(Math.random() * 1200);
+                    var bubble_01_x = Number(String(bubble_01_x).substring(0,bubble_01_x.indexOf("."))) * 2;
+                    $(".front").append("<div class='bubble_01' style='background: #1b4b89; width:" + bubble_01 + "px; height:" + bubble_01 + "px; margin-left:"+ bubble_01_x +"px; border-radius: 50%;'/>");
+                }, 50);
+                setInterval(function(){                    
+                    $(".bubble_01").remove();
+                }, 5000);
+            });
+        </script>
+    </head>
+    <body>
+        <svg style="position: absolute; width: 1400px; top:50%; left: 50%; transform: translate(-50%, -50%); z-index: 9;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1400 1000" style="enable-background:new 0 0 1400 1000;" xml:space="preserve">
+            <style type="text/css">
+	            .svg_bg{fill: var(--color_bg);}
+                .st0{fill: #fff;}
+                .st1{fill: #1b4b89;}
+            </style>
+            <g id="Layer_1">
+                <path class="svg_bg" d="M0,0v1000h1400V0H0z M544.12,655.88c-86.15-86.15-86.15-225.8,0-311.76c86.15-86.15,225.8-86.15,311.76,0 c86.15,86.15,86.15,225.8,0,311.76C769.73,742.03,630.08,742.03,544.12,655.88z"/>
+                <path class="st0" d="M544.12,344.12c-86.15,85.97-86.15,225.62,0,311.76c85.97,86.15,225.62,86.15,311.76,0
+                    c86.15-85.97,86.15-225.62,0-311.76C769.92,257.97,630.27,257.97,544.12,344.12z M495.51,499.91
+                    c0-112.81,91.59-204.4,204.58-204.58c45.89,0,88.32,15.23,122.6,40.99c-41.17,137.11-149.81,245.02-287.28,284.92
+                    C510.38,587.33,495.51,545.43,495.51,499.91z M904.67,499.91c0,112.99-91.59,204.58-204.58,204.58
+                    c-62.93,0-119.34-28.66-156.88-73.45c124.23-39.17,214.19-39.17,276.04-84.7c35.37-26.12,58.76-67.83,58.76-115.35
+                    c0-14.69-2.18-28.84-6.35-42.26C892.52,420.83,904.49,458.92,904.67,499.91z"/>
+            </g>
+        </svg>
+        <div class="bottom_bg"></div>
+        
+        <div class="wrap">
+            <div class="back">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 2400 700" style="enable-background:new 0 0 2400 700;" xml:space="preserve">
+                    <path class="st1" d="M1991.49,320.91c-207.55-37.74-205.99,36.22-347.11,36.22c-209.31,0-215.99-149.43-444.38-149.43
+                    c-127.38,0-260.91,140.04-408.51,113.21c-207.55-37.74-205.99,36.22-347.11,36.22C235.07,357.13,228.39,207.7,0,207.7V700h1200h1200
+                    V207.7C2272.62,207.7,2139.09,347.74,1991.49,320.91z"/>
+                </svg>
+            </div>
+            <div class="front">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 2400 700" style="enable-background:new 0 0 2400 700;" xml:space="preserve">
+                    <path class="st1" d="M1991.49,320.91c-207.55-37.74-205.99,36.22-347.11,36.22c-209.31,0-215.99-149.43-444.38-149.43
+                    c-127.38,0-260.91,140.04-408.51,113.21c-207.55-37.74-205.99,36.22-347.11,36.22C235.07,357.13,228.39,207.7,0,207.7V700h1200h1200
+                    V207.7C2272.62,207.7,2139.09,347.74,1991.49,320.91z"/>
+                </svg>
+            </div>
+            <div class="cover"></div>
+        </div>
+        
+<!--
+                <filter id="gooey">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur"/>
+                    <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0
+                    0 1 0 0 0
+                    0 0 1 0 0
+                    0 0 0 18 -7" result="contrast" />
+                    <feBlend in="SourceGraphic" in2="contrast" />
+                </filter>        
+-->
+    </body>
+</html>
+
+
