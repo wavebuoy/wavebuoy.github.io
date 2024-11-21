@@ -1,0 +1,559 @@
+ <!doctype html>
+<html>
+    <head>
+        <title>Bobbi Brown</title>
+        <link rel="stylesheet" type="text/css" href="css/slick.css">
+        <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+        <link rel="stylesheet" type="text/css" href="css/slick-custom.css">
+        
+        <!--UTF-8 : 아~ 그거영~ 글로벌 언어 "인코딩" 방식으로 알고있습니다.-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!--전 세계 모든 언어가 인코딩 가능하게 해주는 코드, 필수로 넣어야 함. (외울필요없음)-->
+        
+        <meta name="viewport" content="width=1236, user-scalable=yes, target-densityDpi=medium-dpi">
+        <!--휴대폰에서도 가로 크기가 컴퓨터 화면처럼 나오게 하는 코드-->
+        
+        <meta name="format-detection" content="telephone=no">
+        <!-- xxx-xxxx-xxxx 형태의 문자가 전화번호로 인식되어 css가 깨지지 않게 만들어주는 코드-->
+        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <!--google fonts에서 Roboto 폰트를 인터넷에서 가져옴 (아직 사용하지 않음)-->
+        
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome_all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/btns.css">
+        <!--css와 본 html 코드를 연결해줌-->
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript" src="js/slick.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <!--common javascript와 본 html 코드를 연결해줌-->
+        
+        <script type="text/javascript">
+            $(function(){
+                //슬릭을 굴릴 친구의 엄마를 선택
+                $("#collab").slick({
+                    autoplay: true, // 자동으로 넘어감
+                    autoplaySpeed: 2000, // 넘어가는 속도
+                    fade: true,
+                    pauseOnHover: false,
+                    pauseOnFocus: false,
+                    dots: true,
+                    arrows: false
+                });
+                
+                function scroll_effect(sc_y){
+                    if(sc_y <= 0){
+                        $("#header.section_00").removeClass("scrolled");
+                    }else{
+                        $("#header.section_00").addClass("scrolled");
+                    }
+                }
+
+                /*실시간 스크롤값 추출*/
+                let ticking = false;
+                document.addEventListener('scroll', function(e) {
+                    if (!ticking) {
+                        window.requestAnimationFrame(function() {
+                            scroll_effect(window.scrollY);
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                });
+            });
+        </script>        
+    </head>
+    <body class="ready">
+        <div class="loading_cover"></div>
+        <div class="wrap"> <!--html 전체를 감싸줌-->
+            <!--헤더, 구조를 잘 뜯어보세요!-->
+            <div id="header" class="sections section_00">
+                <div class="width_con">
+                    <a class="btn_home" href="index.html"><img src="img/bi_text_w.svg" alt="Go to home" title="bobbibrown"></a>
+                    <!--alt: 이미지가 뜨지 않을 경우에 나오는 글자, title: 이미지를 hover하고있을 때 나오는 글자-->
+                    <div class="nav_con">
+                        <ul class="nav">
+                            <li><a href="#home">Welcome</a></li><!-- a태그 : 링크를 걸어주기 위한 태그
+                         --><li><a href="#intro">Intro</a></li><!--
+                         --><li><a href="#story">Story</a></li><!--
+                         --><li><a href="#category">Category</a></li><!--
+                         --><li><a href="#collab">Collab</a></li><!--
+                         --><li><a href="#svc">Service</a></li><!--
+                         --><li><a href="#slogan">Slogan</a></li><!--
+                         --><li><a href="#store">Store</a></li><!--
+                         --><li><a href="#map">Contact</a></li>
+                        </ul>
+                        <ul class="nav_customer">
+                            <li><a href="">Offical Website</a></li><!--
+                         --><li><a href="">Support</a></li><!--
+                         --><li><a href="">|</a></li><!--
+                         --><li><a href="">Eng</a></li><!--
+                         --><li><i class="far fa-angle-down"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="home" class="sections section_01">
+                <img src="img/ratio_16x9.png" class="ratio"><!--
+* ratio를 넣는 이유 *
+1. 동영상의 크기가 16x9보다 클 때 비율을 맞춰주기 위함
+2. 동영상을 사이트에 꽉 차게 넣기 위함
+3. 클릭했을 때 멈추지 않게 하기 위함
+-->
+                <iframe class="youtube_player" src="https://player.vimeo.com/video/395946920?h=f0f433a594&autopause=0&loop=1&title=0&byline=0&portrait=0&background=1&muted=1"frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                <div class="width_con">
+                    <div class="title_con">
+<!--
+nobt이 뭔가요?
+no bottom이라는 뜻으로 그냥 우리가 편하게 이름 지은 클래스
+title_con 클래스에는 기본적으로 위 아래에 72px씩 여백(margin)이 들어감. => title_con과 box가 위아래로 연달아 나오는 경우 72px을 띄기 위함.
+title_con 밑에 box들이 없다면 nobt 클래스를 넣어주어 72px을 빼줌.
+-->
+                        <h3>More beauty less makeup</h3>
+                        <h1>Bobbi Brown</h1>
+                        <h4>The secret to beauty is simple-be who you are</h4>
+                        <h5>Bobbi Brown is a luxury artistry brand that supports women's confidence and original beauty. Bobbi Brown's Hero product which has the artist's expertise, expresses healthy glowing skin and finds the color that can represent the most natural beauty to you.</h5>
+                    </div>
+                    <div class="btn_con">
+                        <a class="btn btn_a btn_icon" href="javascript:;"><span>View More</span><i class="far fa-chevron-right"></i></a>
+                        
+<!--
+i태그는 뭔가요?
+감싸고 있는 글자를 이텔릭체로 만들어주는 태그, inline 속성을 가지고 있음.
+i태그는 잘 쓰지 않기 때문에 font awesome에서 아이콘을 가져올 때 사용한다.
+
+font awesome에서 가져오는 아이콘은 text로 인식되기 때문에 색을 바꿀 때는 color: #fff;로 바꾸어주면 된다.
+-->
+                    </div>
+                </div>
+            </div>
+            <div id="intro" class="sections section_02">
+                <div class="width_con">
+                    <div class="title_con center">
+                        <h3>Introduction</h3>
+                        <h2>"Confidence is true beauty"</h2>
+                        <h4>Bobbi Brown is a irreplaceability brand</h4>
+                        <h5>Bobbi Brown is that women love with confidence and express their individual strengths more beautifully.</h5>
+                    </div>
+                    <ul class="v_con three_con">
+                        <li class="cells box gray">
+<!--
+gray 클래스 : box가 hover되었을 때 css에
+1. filter: grayscale(1); -> 이미지의 saturation(채도)을 빼준다. (흑백)
+2. background: linear-gradient(135deg, var(--c-p1) 0%, var(--c-p2) 100%); -> bobbi brown 포인트 컬러 그라데이션을 오버레이로 깔아준다.
+3. background: rgba(0, 0, 0, .35); -> 검은 opacity: 35%;의 이미지를 오버레이로 깔아준다.
+-->
+                            <img src="img/img_s2_01.jpg" class="full_img"> <!--full_img: 이미지의 width를 박스의 100%로 맞춰주는 css-->
+                            <div class="title center">
+                                <h4><span class="bold">1991</span>y</h4> <!--
+span 태그로 font-size가 커질 글자만 묶어서 bold 클래스를 줌,
+bold 클래스에 폰트 사이즈를 설정해줌
+-->
+                                <h5>Bobbi Brown founded in New York, USA</h5>
+                            </div>
+                        </li><!--
+                        --><li class="cells box gray">
+                            <img src="img/img_s2_02.jpg" class="full_img">
+                            <div class="title center">
+                                <h4><span class="bold">5.2</span>k</h4>
+                                <h5>Makeup artists from all over the world</h5>
+                            </div>
+                        </li><!--
+                        --><li class="cells box gray">
+                            <img src="img/img_s2_03.jpg" class="full_img">
+                            <div class="title center">
+                                <h4><span class="bold">1999</span>y</h4>
+                                <h5>Bobbi Brown Launched in Korea</h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="story" class="sections section_03">
+                <div class="width_con">
+                    <ul class="v_con two_con">
+                        <li class="cells"></li><!--
+                        --><li class="cells">
+                            <div class="title_con nobt"> <!--title_con 밑에 box가 없기 때문에, 즉 width콘 상하에 준 144px과 title_con 하단에 준 72px이 겹쳐져 상단에는 144px, 하단에는 216px이 떨어지기 때문에 nobt클래스를 넣어 상단과 하단 모두 144px만 떨어지게 만들어줌.-->
+                                <h3>More beauty less effort</h3>
+                                <h2>Our story</h2>
+                                <h4>No matter what color skin you have, what color eyes you have, what color hair you have, anyone could make themselves look beautiful.<br>You have to embrace yourself, embrace your age.</h4>
+                                <h5>"Make up is a way to change thte way you feel,make you comfortable in your skin, and enhance who you are.<br>I love when she smiles, you see the little lines. And you know what?<br>We have lines. And that's okay.<br>Make should not change the way you look.<br>You don't wear foundation to change the color of your skin.<br>You don't contour your nose.<br> There is nothing wrong with your nose.<br>You don't overline your lips. Makeup should enhance who you are.<br>She doesn't need anything else."</h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="category" class="sections section_04">
+                <div class="width_con">
+                    <div class="title_con center">
+                        <h3>Our products you will love</h3>
+                        <h2>Category</h2>
+                        <h4>Meet products that can further enhance your charm</h4>
+                        <h5>You will be able to customzie with our own product.<br>By categoring Bobbi Brown products are waiting for you.</h5>
+                    </div>
+                    <ul class="v_con four_con">
+                        <li class="cells box viewer"><!--
+viewer 클래스가 무슨 역할인가요?
+1. 마우스를 올리기 전에 글자를 잘 보이게 하기 위한 검은 그라디언트
+2. 마우스를 올렸을 때 조금 더 높게 올라오는 그라디언트와 h5 효과를 적용함
+자세한 내용은 common.css를 참고하세요~!
+-->
+                            <img class="full_img" src="img/img_s4_01.jpg">
+                            <div class="text_box">
+                                <h4>Lips</h4>
+                                <h5>Bold color payoff with one swipe in finishes from velvety matte to mirror-like shine</h5>
+                            </div>
+                        </li><!--
+                        --><li class="cells box viewer">
+                            <img class="full_img" src="img/img_s4_02_1.jpg">
+                            <div class="text_box">
+                                <h4>Skin</h4>
+                                <h5>Formulas that give you a fresh, clean start to your skincare routine. </h5>
+                            </div>
+                        </li><!--
+                        --><li class="cells box viewer">
+                            <img class="full_img" src="img/img_s4_03.jpg">
+                            <div class="text_box">
+                                <h4>Foundation</h4>
+                                <h5>Enhance your complexion with undertone-correct formulas that provide the coverage you want and the finish you love</h5>
+                            </div>
+                        </li><!--
+                        --><li class="cells box viewer">
+                            <img class="full_img" src="img/img_s4_04.jpg">
+                            <div class="text_box">
+                                <h4>Eye</h4>
+                                <h5>Play up eyes with matte, metallic, and shimmery finishes</h5>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btn_con center">
+                        <a class="btn btn_a btn_icon" href="javascript:;"><span>View More</span><i class="far fa-chevron-right"></i></a><!--View More Button-->
+                    </div>
+                </div>
+            </div>
+            
+            <div id="collab" class="sections section_05">
+                <div class="sections section_05_01">
+                    <img src="img/ratio_16x9.png" class="full_img">
+                    <div class="width_con">
+                        <div class="title_con center nobt"><!--title_con 밑에 box가 없기 때문에 nobt을 넣어줌.-->
+                            <h3>Collaboration</h3>
+                            <h2>Artisee<br>&times;<br>Bobbi Brown</h2>
+                            <h4>Cafe Artisee launched five collaboration products with makeup brand Bobbi Brown to celebrate White Day</h4>
+                            <h5>These products, reminiscent of Bobbi Brown's makeup kit, are the main products of heart chocolate with various nectar and espresso undiluted solutions in the ganache base, and a bar-type pink chocolate palette featuring the flavor and texture of caramel nuts.</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="sections section_05_02">
+                    <img src="img/ratio_16x9.png" class="full_img">
+                    <div class="width_con">
+                        <div class="title_con center nobt"><!--title_con 밑에 box가 없기 때문에 nobt을 넣어줌.-->
+                            <h3>Collaboration</h3>
+                            <h2>Look Fantastic<br>&times;<br>Bobbi Brown</h2>
+                            <h4>Bobbi beauty Look Fantastic x Bobbi Brown launch limited edition beauty box. Bringing a stellar line up of their products to one place it's a must have for any beauty fan.</h4>
+                            <h5>The Look Fantastic &times; Bobbi brown box includes three full sized and two deluxe sized products, so is a great time to try out some of their cult favorites for a fraction of the price. The hugely popular Vitamin Enriched Face Base, is available as a deluxe size-with one sold every 32 seconds, and beauty fans will also be able to get their hands on the iconic cult favorite Highlighting Powder. Just don't hang about if you want to get your hands on one, they're sure to sell out fast.</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="sections section_05_03">
+                    <img src="img/ratio_16x9.png" class="full_img">
+                    <div class="width_con">
+                        <div class="title_con center nobt"><!--title_con 밑에 box가 없기 때문에 nobt을 넣어줌.-->
+                            <h3>Collaboration</h3>
+                            <h2>Starry Night<br>&times;<br>Bobbi Brown</h2>
+                            <h4>It tells stories of peaceful, powerful female characters, and celebrate the culture, diversity, imagination, and spiritual emotions during the holy month.</h4>
+                            <h5>The Bobbi Brown Starry Nights Collection features 8 bestseller products encased in my illustrations. Real nudes eye palette in blush nudes, real nudes eye palette in golden nudes, highlighting powder in pink glow, bronzing powder in golden light, luxe matte lip color in tawny pink, luxe lip  color in neutral rose, crushed lip color in brownie, extra lip tint in bare pink. The collection is available at Bobbi Brown boutiques, counters and online.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            <div id="svc" class="sections section_06">
+                <div class="width_con">
+                    <ul class="v_con two_con">
+                        <li class="cells sticker">
+                            <div class="title_con">
+                                <h3>Virtmual aritsty consultations</h3>
+                                <h2>Learn from the pros</h2>
+                                <h4>A short lecture will make you more professional</h4>
+                                <h5>From trying a new shade to learning new tips, our artists are here to help with complimentary video sessions.</h5>
+                            </div>
+                            <div class="btn_con">
+                                <a class="btn btn_a btn_icon" href="javascript:;"><span>View More</span><i class="far fa-chevron-right"></i></a><!--View More Button-->
+                            </div>
+                        </li><!--
+                        --><li class="cells">
+                            <ul class="v_con">
+                                <li class="cells box click"><!--
+click 클래스가 뭔가요?
+마우스를 클릭했을 때 클릭한 것처럼 나타나는 효과를 지정함.
+-->
+                                    <a href="javascript:;">
+                                        <img class="full_img" src="img/img_s6_01.jpg">
+                                        <div class="title">
+                                            <h6>15</h6>
+                                            <h4>Makeup Your way</h4>
+                                            <h5>In this customizable session, an artist will help you create your best look-from boosting your glow to mastering your brows to amplifying eyes.</h5>
+                                        </div>
+                                    </a>
+                                </li><!--
+                                --><li class="cells box click">
+                                    <a href="javascript:;">
+                                        <img class="full_img" src="img/img_s6_02.jpg">
+                                        <div class="title">
+                                            <h6>15</h6>
+                                            <h4>Find your foudation</h4>
+                                            <h5>Discover your feel-good coverage, weightless formula, and ideal finish in this complimentary artist consultation.</h5>
+                                        </div>
+                                    </a>
+                                </li><!--
+                                --><li class="cells box click">
+                                    <a href="javascript:;">
+                                        <img class="full_img" src="img/img_s6_03.jpg">
+                                        <div class="title">
+                                            <h6>15</h6>
+                                            <h4>5-Minute Makeup</h4>
+                                            <h5>Learn how to get ready in no time using five effortless essentials and a personalized game plan by one of our artists.</h5>
+                                        </div>
+                                    </a>
+                                </li><!--
+                                --><li class="cells box click">
+                                    <a href="javascript:;">
+                                        <img class="full_img" src="img/img_s6_04.jpg">
+                                        <div class="title">
+                                            <h6>15</h6>
+                                            <h4>Effortless Eyes</h4>
+                                            <h5>Learn how to choose the right shades, finishes, and technoques to enhance your eye shape and skin tone using Long-Wear Cream Shadow Sticks.</h5>
+                                        </div>
+                                    </a>
+                                </li><!--
+                                --><li class="cells box click">
+                                    <a href="javascript:;">
+                                        <img class="full_img" src="img/img_s6_05.jpg">
+                                        <div class="title">
+                                            <h6>15</h6>
+                                            <h4>Correct &amp; Conceal</h4>
+                                            <h5>Look less tired by neutralizing undereye circles to look instantly more awake and bright-eyed using our new Skim Corrector Stick &amp; Skin Concealer Stick.</h5>
+                                        </div>
+                                    </a>
+                                </li><!--
+                                --><li class="cells box click">
+                                    <a href="javascript:;">
+                                        <img class="full_img" src="img/img_s6_06.jpg">
+                                        <div class="title">
+                                            <h6>15</h6>
+                                            <h4>Customize Your Skincare Routine</h4>
+                                            <h5>Learn how to address your top skin concerns with a personalized routine curated by an artist.</h5>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="slogan" class="sections section_07">
+                <div class="width_con">
+                    <h2>Knowing what you can do<br>at any given time to look<br>and feel better is pretty powerful</h2>
+                </div>
+            </div>
+            <!--<div id="camp" class="sections section_08">
+                <div class="width_con">
+                    <ul class="v_con two_con">
+                        <li class="cells"></li>
+                        <li class="cells">
+                            <div class="title_con">
+                                <h3>Looking good doing better</h3>
+                                <h2>Sustainable</h2>
+                                <h4>We're doing our part to help reduce our environmental impact because we love our planet-it's as simple as that. We're aiming to eliminate excess packaging, increase our use of post-consumer recycled materials, and develop refillable alternatives.</h4>
+                                <h5>We’re well on our way to meeting our sustrainability by 2025:</h5>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="v_con three_con">
+                        <li class="cells box hover">
+                            <img class="ratio" src="img/ratio_4x3.png">
+                            <img class="full_img" src="img/icon_s8_01.png">
+                            <div class="title">
+                                <h4>Sustainability</h4>
+                            </div>
+                        </li>
+                     <li class="cells box">
+                            <img class="ratio" src="img/ratio_4x3.png">
+                            <img class="full_img" src="img/icon_s8_02.png">
+                            <div class="title">
+                                <h4>Carbon Neutral</h4>
+                            </div>
+                        </li>
+                     <li class="cells"><h4></h4></li>
+                     <li class="cells box">
+                            <img class="ratio" src="img/ratio_4x3.png">
+                            <img class="full_img" src="img/icon_s8_03.png">
+                            <div class="title">
+                                <h4>Ingredient Glossary</h4>
+                            </div>
+                        </li>
+                     <li class="cells box">
+                            <img class="ratio" src="img/ratio_4x3.png">
+                            <img class="full_img" src="img/icon_s8_04.png">
+                            <div class="title">
+                                <h4>Pretty- Powerful</h4>
+                            </div>
+                        </li>
+                     <li class="cells box">
+                            <a href="javascript:;">
+                                <img class="ratio" src="img/ratio_4x3.png">
+                                <div class="title center">
+                                    <h4>Learn More</h4>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>-->
+            <div id="store" class="sections section_09">
+                <div class="width_con">
+                    <div class="title_con center">
+                        <h3>Experience the product in store</h3>
+                        <h2>Find a store</h2>
+                        <h4>See and experience the product in person</h4>
+                        <h5>Bobbi brown is all around the world wherever you are at. Please find the store closest from you and check it out our products.</h5>
+                    </div>
+                    <ul class="v_con">
+                        <li class="cells box">
+                            <img class="full_img" src="img/ratio_3x2.png" style="background: url(img/bg_s9_01.jpg) 50% 50% no-repeat; background-size: cover;">
+                            <div class="title_con center">
+                                <h3>London</h3>
+                                <h5>400 Oxford St, London W1U 1AT, England</h5>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="v_con four_con">
+                        <li class="cells box click dark btn_store" data-store="01">
+                            <img class="full_img" src="img/img_s9_01.jpg">
+                            <div class="title center">
+                                <h4>London</h4>
+                                <h5>England</h5>
+                                <h6>400 Oxford St, London W1U 1AT, England</h6>
+                            </div>
+                        </li><!--
+                     --><li class="cells box click btn_store" data-store="02">
+                            <img class="full_img" src="img/img_s9_02.jpg">
+                            <div class="title center">
+                                <h4>Paris</h4>
+                                <h5>France</h5>
+                                <h6>10 Rue de Sèvres, 75007 Paris, France</h6>
+                            </div>
+                        </li><!--
+                     --><li class="cells box click btn_store" data-store="03">
+                            <img class="full_img" src="img/img_s9_03.jpg">
+                            <div class="title center">
+                                <h4>Barcelona</h4>
+                                <h5>Spain</h5>
+                                <h6>Rambla de Catalunya, 87, 08008 Barcelona, Spain</h6>
+                            </div>
+                        </li><!--
+                     --><li class="cells box click btn_store" data-store="04">
+                            <img class="full_img" src="img/img_s9_04.jpg">
+                            <div class="title center">
+                                <h4>Dubai</h4>
+                                <h5>Arab Emirates</h5>
+                                <h6>57XH+9JQ - The Dubai Mall - Financial Center Rd - Dubai, Arab Emirates</h6>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="map" class="sections section_10">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.842553872062!2d-73.99713043598591!3d40.723935394844034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598ee25b8d6f%3A0x453fc028cf673fcf!2zNTc1IEJyb2Fkd2F5IEZsIDQsIE5ldyBZb3JrLCBOWSAxMDAxMiDrr7jqta0!5e0!3m2!1sko!2skr!4v1692606563301!5m2!1sko!2skr" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="width_con">
+                    <ul class="v_con three_con">
+                        <li class="cells box">
+                            <div class="title_con nobt">
+                                <h3>Feel free contact us</h3>
+                                <h2>Contact</h2>
+                                <h4>Business hours<br>Monday - Saturday<br>9:00AM - 6:00PM<br><br>Closed on Sunday </h4>
+                                <h5>Please do not hesitate to contact to us.<br>We are happy to assist what youw have any questions.<br>Tel. +1 (646) 613-6500</h5>
+                            </div>
+                        </li><!--
+                     --><li class="cells"></li>
+                    </ul>
+                    <a class="pins" class="btn btn_a large btn_icon nomg" href="https://goo.gl/maps/ciPHthioQETi3Sy17" target="_blank" title="View on Google Map">
+                        <div class="shadow"></div>
+                        <div class="needle"></div>
+                    </a>
+                </div>
+            </div>
+            <div id="footer" class="sections section_11">
+                <div class="width_con">
+                    <img src="img/bi_text_w.svg">
+                    <ul class="v_con four_con">
+                        <li class="cells">
+                            <h4>Bobbi Brown</h4>
+                            <a href="javascript:;"><h5>About</h5></a>
+                            <a href="javascript:;"><h5>Our story</h5></a>
+                        </li><!--
+                     --><li class="cells">
+                            <h4>Notice</h4>
+                            <a href="javascript:;"><h5>Privacy Policy</h5></a>
+                            <a href="javascript:;"><h5>Limit Use Personal Information</h5></a>
+                            <a href="javascript:;"><h5>Terms &amp; Conditions</h5></a>
+                            <a href="javascript:;"><h5>Accessibility</h5></a>
+                        </li><!--
+                     --><li class="cells">
+                            <h4>Virtual Service</h4>
+                            <a href="javascript:;"><h5>Virtual Artistry Consultations</h5></a>
+                            <a href="javascript:;"><h5>Live Chat with an Artist</h5></a>
+                            <a href="javascript:;"><h5>Bobbi Brown Live</h5></a>
+                            <a href="javascript:;"><h5>Virtual Try-On</h5></a>
+                        </li><!--
+                     --><li class="cells">
+                            <h4>Need Help</h4>
+                            <a href="javascript:;"><h5>FAQs</h5></a>
+                            <a href="javascript:;"><h5>Store Locator</h5></a>
+                            <a href="javascript:;"><h5>Live Chat with Customer Service</h5></a>
+                            <h5>(877) 310-9222</h5>
+                        </li><!--
+                     --><li class="cells">
+                            <table>
+                                <tr>
+                                    <td width="25%"><h4>Add</h4></td>
+                                    <td><h5>575 Broadway Fl 4, New York, 10012, United States</h5></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>Tel</h4></td>
+                                    <td><h5>(646) 613-6500</h5></td>
+                                </tr>
+                            </table>
+                        </li><!--
+                     --><li class="cells">
+                        </li><!--
+                     --><li class="cells">
+                            <h4>Follow</h4>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-youtube"></i>
+                        </li><!--
+                     --><li class="cells">
+                            <img src="">
+                        </li>
+                    </ul>
+                    <h5>ⓒ Bobbi Brown Professional Cosmetics, Inc. All worldwide rights reserved.</h5>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
