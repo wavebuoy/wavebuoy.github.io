@@ -55,11 +55,11 @@ table {
 }
 
 .material-symbols-outlined.fill {
-  font-size:32px;
+  font-size:50px;
   color:#13cfb8;
   font-variation-settings:
   'FILL' 1 ,
-  'wght' 400,
+  'wght' 700,
   'GRAD' 0,
-  'opsz' 24
+  'opsz' 48	
 }
