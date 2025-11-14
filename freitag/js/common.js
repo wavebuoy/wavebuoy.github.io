@@ -18,6 +18,8 @@ function scroll_effect(sc_y){
     }
 }
 
+feather.replace();
+
 var re_resize_timer;
 /*re_resize_timer라는 변수 선언*/
 function resize(){
@@ -308,6 +310,7 @@ $(function(){
         });
     });
 });
+
 
 
 
