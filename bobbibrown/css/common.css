@@ -416,7 +416,8 @@ body.ready .loading_cover:before{content: 'Loading...'; }
 #footer.sections.section_11 .width_con ul.v_con li.cells img{}
 #footer.sections.section_11 .width_con h5{}
 #footer.sections.section_11 .width_con > h5{margin-top: var(--mrgn-x4);}
-#footer.sections.section_11 .width_con ul.v_con li.cells i.fa-facebook-f{ font-size: calc(var(--mrgn) * 1.4);}
-#footer.sections.section_11 .width_con ul.v_con li.cells i{ font-size: calc(var(--mrgn) * 1.5); padding: var(--mrgn) var(--mrgn) var(--mrgn) 0; transition: all 100ms ease-in-out; opacity: 1;}
-#footer.sections.section_11 .width_con ul.v_con li.cells i:hover{cursor: pointer; opacity: .75;}
+#footer.sections.section_11 .width_con ul.v_con li.cells svg:first-child{ font-size: calc(var(--mrgn) * 1.4);}
+#footer.sections.section_11 .width_con ul.v_con li.cells svg{ font-size: calc(var(--mrgn) * 1.5); padding: var(--mrgn) var(--mrgn) var(--mrgn) 0; transition: all 100ms ease-in-out; opacity: 1;}
+#footer.sections.section_11 .width_con ul.v_con li.cells svg:hover{cursor: pointer; opacity: .75;}
+
 #footer.sections.section_11 .width_con ul.v_con li.cells i:active{transform: scale(.975);}
