@@ -30,6 +30,7 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         
         <script type="text/javascript" src="js/slick.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
         <script type="text/javascript" src="js/common.js"></script>
         <!--common javascript와 본 html 코드를 연결해줌-->
         
@@ -93,7 +94,7 @@
                          --><li><a href="">Support</a></li><!--
                          --><li><a href="">|</a></li><!--
                          --><li><a href="">Eng</a></li><!--
-                         --><li><i class="far fa-angle-down"></i></li>
+                         --><li><i data-feather="globe"></i></li>
                         </ul>
                     </div>
                 </div>
@@ -233,7 +234,7 @@ viewer 클래스가 무슨 역할인가요?
                         </li>
                     </ul>
                     <div class="btn_con center">
-                        <a class="btn btn_a btn_icon" href="javascript:;"><span>View More</span><i class="far fa-chevron-right"></i></a><!--View More Button-->
+                        <a class="btn btn_a btn_icon" href="javascript:;"><span>View More</span><i data-feather="arrow-right"></i></a><!--View More Button-->
                     </div>
                 </div>
             </div>
@@ -288,7 +289,7 @@ viewer 클래스가 무슨 역할인가요?
                                 <h5>From trying a new shade to learning new tips, our artists are here to help with complimentary video sessions.</h5>
                             </div>
                             <div class="btn_con">
-                                <a class="btn btn_a btn_icon" href="javascript:;"><span>View More</span><i class="far fa-chevron-right"></i></a><!--View More Button-->
+                                <a class="btn btn_a btn_icon" href="javascript:;"><span>View More</span><i data-feather="arrow-right"></i></a><!--View More Button-->
                             </div>
                         </li><!--
                         --><li class="cells">
@@ -543,9 +544,9 @@ click 클래스가 뭔가요?
                         </li><!--
                      --><li class="cells">
                             <h4>Follow</h4>
-                            <i class="fab fa-facebook-f"></i>
-                            <i class="fab fa-instagram"></i>
-                            <i class="fab fa-youtube"></i>
+                            <i data-feather="facebook"></i>
+                            <i data-feather="instagram"></i>
+                            <i data-feather="youtube"></i>
                         </li><!--
                      --><li class="cells">
                             <img src="">
@@ -555,5 +556,7 @@ click 클래스가 뭔가요?
                 </div>
             </div>
         </div>
+        <script>feather.replace();</script>
     </body>
+
 </html>
