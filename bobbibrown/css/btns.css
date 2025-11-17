@@ -22,7 +22,7 @@
 
 .btn.btn_a { color: var(--c-w); text-transform: uppercase; box-shadow: 0 4px 10px -4px rgba(141, 114, 79, .5); position: relative; z-index: 1; background: var(--c-p1);}
 .btn.btn_a span {position: relative;}
-.btn.btn_a:before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--c-p1) 0%, var(--c-p2) 100%); opacity: 1; border-radius: inherit; transition: inherit;}
+.btn.btn_a:before {z-index:-1; content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--c-p1) 0%, var(--c-p2) 100%); opacity: 1; border-radius: inherit; transition: inherit;}
 .btn.btn_a:hover { color: var(--c-w); box-shadow: 0 3px 9px -3px rgba(141, 114, 79, .85);}
 .btn.btn_a:hover:before {opacity: 0;}
 .btn.btn_a:active { box-shadow: 0 1px 3px -1px rgba(141, 114, 79, .1);}
@@ -47,6 +47,7 @@
 .btn_year li:hover {background: rgba(0, 69, 38); box-shadow: 0 3px 9px -3px rgba(64, 68, 38, .85);}
 .btn_year li:active { box-shadow: 0 1px 3px -1px rgba(64, 68, 38, .1); transform: scale(.975);}
 .btn_year li.on { background: #404426;}
+
 
 
 
