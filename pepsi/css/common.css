@@ -339,9 +339,9 @@ iframe{ position: absolute; left: 0; top: -100px; width: 100%; height: calc(100%
 #products.full3 .full_sub_con .full_sub .full_con ul.panels li .panel .cover_con{}
 #products.full3 .full_sub_con .full_sub .full_con ul.panels li .panel .acc_nav{ margin-top: 45px; margin-left: 60px; width: 100%; transition: all 350ms ease-out;}
 #products.full3 .full_sub_con .full_sub .full_con ul.panels li .panel .acc_nav > div{ display: inline-block;}
-#products.full3 .full_sub_con .full_sub .full_con ul.panels li .panel .acc_nav .btn_close{ position: absolute; top: 50px; right: 60px; width: 40px; height: 40px; opacity: 0; pointer-events: none; z-index: -1; font-size: 22px; border: 3px solid #1b365d; border-radius: 50%; transition: inherit;}
+#products.full3 .full_sub_con .full_sub .full_con ul.panels li .panel .acc_nav .btn_close{ position: absolute; top: 50px; right: 60px; width: 40px; height: 40px; opacity: 0; pointer-events: none; z-index: -1; transition: inherit;}
 #products.full3 .full_sub_con .full_sub .full_con ul.panels li.on .panel .acc_nav .btn_close{ opacity: 1; pointer-events: auto; z-index: 99;}
-#products.full3 .full_sub_con .full_sub .full_con ul.panels li .panel .acc_nav .btn_close i{ position: absolute; left: 50%; top: 49%; transform: translate(-50%, -50%); color: #1b365d;}
+#products.full3 .full_sub_con .full_sub .full_con ul.panels li .panel .acc_nav .btn_close svg{ width: 40px; height: 40px; stroke-width: 1.5px;}
 #products.full3 .full_sub_con .full_sub .full_con ul.panels li .panel .acc_nav .acc_num{ font-size: 40px; margin-top: 5px; text-align: center; width: 50px; color: #1b365d;}
 #products.full3 .full_sub_con .full_sub .full_con ul.panels li .panel .acc_nav .text_con{ margin-left: 90px; color: #1b365d;}
 #products.full3 .full_sub_con .full_sub .full_con ul.panels li .panel .acc_nav .text_con h4{ font-size: 50px; font-weight: 700;}
@@ -458,3 +458,4 @@ iframe{ position: absolute; left: 0; top: -100px; width: 100%; height: calc(100%
 #contact.full7 .full_con .btn_b.dark:active i { color: #050d46;}
 
 /*------------------------------------------------------------------*/
+
