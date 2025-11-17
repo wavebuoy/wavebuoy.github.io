@@ -16,7 +16,7 @@
 
 .slick-arrow.slick-prev{ left: 0;}
 .slick-arrow.slick-next{ right: 0;}
-.slick-arrow.slick-prev:before{ content: '\f060';}
+.slick-arrow.slick-prev:before{ content: "";mask-image: url('/img/arrow-left.svg');mask-size: contain;mask-repeat: no-repeat;background-color: #000; width: 24px;height: 24px;}
 .slick-arrow.slick-next:before{ content: '\f061';}
 
 ul.slick-dots{bottom: 0; height: 14px; transform: scale(.95); transition: all 150ms ease-out; z-index: 999;}
@@ -35,4 +35,5 @@ ul.slick-dots li button{display: none;}
 
 @media all and (min-width:0px) and (max-width:479px){
 .slick-slide, .slick-slider { margin-bottom: 20px !important;}
+
 }
