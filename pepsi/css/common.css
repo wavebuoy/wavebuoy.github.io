@@ -37,12 +37,12 @@ a{text-decoration: none; color: #111;}
 #header ul.sns{ position: fixed; top: 108px; left: 69px;}
 #header ul.sns:before{ content:""; position: absolute; top: 0px; left: 0px; width: 30px; height: 3px; background: #fff;}
 #header ul.sns li.sns_btn{ margin-top: 30px;} 
-#header ul.sns li.sns_btn i{font-size: 24px; color: #fff; width: 28px; height: 28px; transition: all 250ms ease-out;}
+#header ul.sns li.sns_btn svg{font-size: 24px; color: #fff; width: 28px; height: 28px; transition: all 250ms ease-out; stroke-width:1.5px;}
 #header ul.sns li.sns_btn a {display: block; width: 24px; height: 24px; text-align: center; line-height: 28px;}
-#header ul.sns li.sns_btn:hover i{ color: #a2b5e8;}
+#header ul.sns li.sns_btn:hover svg{ color: #a2b5e8;}
 .light_mode #header ul.sns:before{background: #aeb8c7;}
-.light_mode #header ul.sns li i{ color: #1b365d; transition: all 100ms ease-in-out;}
-.light_mode #header ul.sns li:hover i{ color: #448dda;}
+.light_mode #header ul.sns li svg{ color: #1b365d; transition: all 100ms ease-in-out;}
+.light_mode #header ul.sns li:hover svg{ color: #448dda;}
 
 #header .logo img{width: 48px;}
 #header ul.nav{ position: absolute; top:30px; right: 60px;}
@@ -456,4 +456,5 @@ iframe{ position: absolute; left: 0; top: -100px; width: 100%; height: calc(100%
 #contact.full7 .full_con .btn_b.dark i {}
 #contact.full7 .full_con .btn_b.dark:hover i { color: #fff;}
 #contact.full7 .full_con .btn_b.dark:active i { color: #050d46;}
+
 /*------------------------------------------------------------------*/
