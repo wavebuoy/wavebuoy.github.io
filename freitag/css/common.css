@@ -126,6 +126,8 @@ ul.v_con > li.cells.box:active > a, ul.v_con.slick-slider .slick-list > .slick-t
 #header.section_00 .width_con .nav_con ul.nav_customer{ position: absolute; right:40px; top: 18px;}
 #header.section_00 .width_con .nav_con ul.nav_customer li{ position: relative; float: left; margin-left: var(--mrgn);}
 #header.section_00 .width_con .nav_con ul.nav_customer li:nth-child(4){ margin-left: calc(var(--mrgn-x2) * .75); }
+#header.section_00 .width_con .nav_con ul.nav_customer li:nth-child(4) a{ display:inline-flex; align-items:center; }
+#header.section_00 .width_con .nav_con ul.nav_customer li:nth-child(4) a svg{ width: 14px; height: 14px;}
 #header.section_00 .width_con .nav_con ul.nav_customer li:nth-child(4):before{ position: absolute; content:''; top: 50%; left: calc(var(--mrgn) * -1); height: var(--mrgn); width: 1px; background: #aaa; transform: translateY(-50%);}
 #header.section_00 .width_con .nav_con ul.nav_customer li a{ color: #666; font-size: 12px; font-weight: 500; text-decoration: none; transition: all .1s linear;}
 #header.section_00 .width_con .nav_con ul.nav_customer li a:hover{ color: #a92518;}
@@ -435,7 +437,7 @@ html.not_yet #visual.sections.section_01 .title_con h5{ transition-delay: 2900ms
 #footer.sections.section_12 .width_con ul.no_click{}
 #footer.sections.section_12 .width_con ul.follow{  margin-top: var(--mrgn-x2); }
 #footer.sections.section_12 .width_con ul.letter li{ text-align: left; text-transform: uppercase;}
-#footer.sections.section_12 .width_con ul.letter li i{ position: absolute; right: 0; top: -2px; line-height: 40px; font-size: 15px;}
+#footer.sections.section_12 .width_con ul.letter li a{ position: absolute;right: 0;top: 50%;transform: translateY(-50%);}
 input::placeholder { color: rgba(255,255,255,.7); font-family: 'Montserrat', sans-serif;}
 #footer.sections.section_12 .width_con ul li i{ font-size: 25px;}
 #footer.sections.section_12 .width_con ul li p{}
@@ -444,6 +446,7 @@ input::placeholder { color: rgba(255,255,255,.7); font-family: 'Montserrat', san
 .no_click{ color: rgba(255,255,255,.75);}
 ul.follow.v_con li.cells{ margin: 0 var(--mrgn) var(--mrgn-x2);}
 /*----------------------*/
+
 
 
 
