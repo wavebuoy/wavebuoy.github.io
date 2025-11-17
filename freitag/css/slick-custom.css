@@ -16,8 +16,10 @@
 
 .slick-arrow.slick-prev{ left: 0;}
 .slick-arrow.slick-next{ right: 0;}
-.slick-arrow.slick-prev:before{ content: "";mask-image: url('/img/arrow-left.svg');mask-size: contain;mask-repeat: no-repeat;background-color: #111; width: 18px;height: 18px;}
-.slick-arrow.slick-next:before{ content: "";mask-image: url('/img/arrow-right.svg');mask-size: contain;mask-repeat: no-repeat;background-color: #111; width: 18px;height: 18px;}
+.slick-arrow.slick-prev:before,.slick-next:before{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); content: ""; mask-size: contain; mask-repeat: no-repeat; background-color: #111; display: block; width: 24px; height: 24px;}
+.slick-arrow.slick-prev:before{mask-image: url(../img/arrow-left.svg);}
+.slick-arrow.slick-next:before{mask-image: url(../img/arrow-right.svg);}
+.slick-arrow.slick-prev:hover:before,.slick-arrow.slick-next:hover:before{ background-color: #fff;}
 
 ul.slick-dots{bottom: 0; height: 14px; transform: scale(.95); transition: all 150ms ease-out; z-index: 999;}
 ul.slick-dots:hover{transform: scale(1);}
@@ -37,4 +39,5 @@ ul.slick-dots li button{display: none;}
 .slick-slide, .slick-slider { margin-bottom: 20px !important;}
 
 }
+
 
